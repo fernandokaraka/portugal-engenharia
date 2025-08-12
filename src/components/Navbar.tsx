@@ -1,125 +1,46 @@
+// src/components/Navbar.tsx
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-
-const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/sobre', label: 'Sobre' },
-  { href: '/portfolio', label: 'Portfólio' },
-  { href: '/contato', label: 'Contato' }
-];
-
-function isActive(pathname: string, href: string) {
-  if (href === '/') return pathname === '/';
-  return pathname.startsWith(href);
-}
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
+  const t = useTranslations('nav');
+  const locale = useLocale();
+  const pathname = usePathname() || '/';
+  const locales: Array<'pt'|'en'|'es'> = ['pt','en','es'];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-black/5 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-      <div className="container flex h-16 items-center justify-between">
-        {/* Logo textual rápido */}
-        <Link href="/" className="flex items-center gap-2">
-          <div
-            className="h-9 w-9 rounded-full"
-            style={{ background: 'radial-gradient(120% 120% at 50% 0%, #1B5E20 0%, #1B5E20 50%, #C62828 51%, #C62828 100%)' }}
-          />
-          <span className="text-lg font-extrabold tracking-tight text-brand">
-            Portugal <span className="font-semibold text-ink">Engenharia</span>
-          </span>
+    <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
+      <nav className="container flex items-center justify-between py-4">
+        <Link href="/" className="text-lg font-extrabold text-brand">
+          Portugal Engenharia
         </Link>
 
-        {/* Desktop */}
-        <nav className="hidden items-center gap-6 md:flex">
-          {nav.map(({ href, label }) => (
+        <ul className="hidden gap-6 md:flex">
+          <li><Link href="/">{t('home')}</Link></li>
+          <li><Link href="/sobre">{t('about')}</Link></li>
+          <li><Link href="/portfolio">{t('portfolio')}</Link></li>
+          <li><Link href="/contato">{t('contact')}</Link></li>
+        </ul>
+
+        <div className="flex items-center gap-2">
+          {locales.map(l => (
             <Link
-              key={href}
-              href={href}
-              className={`text-sm font-medium transition-colors ${
-                isActive(pathname, href) ? 'text-brand' : 'text-ink/70 hover:text-accent'
-              }`}
+              key={l}
+              href={pathname}
+              locale={l}
+              className={`rounded px-2 py-1 text-sm ${locale===l ? 'bg-brand text-white' : 'border'}`}
             >
-              {label}
+              {l.toUpperCase()}
             </Link>
           ))}
-
-          {/* Idioma (placeholder simples) */}
-          <div className="relative">
-            <button
-              onClick={() => setLangOpen((v) => !v)}
-              className="inline-flex items-center gap-2 rounded-md border border-black/10 px-3 py-2 text-sm text-ink/80 hover:border-black/20"
-              aria-haspopup="menu"
-              aria-expanded={langOpen}
-            >
-              🌐 Português
-            </button>
-            {langOpen && (
-              <div role="menu" className="absolute right-0 mt-2 w-40 overflow-hidden rounded-md border border-black/10 bg-white shadow-soft">
-                <button className="block w-full px-3 py-2 text-left text-sm hover:bg-surface">Português</button>
-                <button className="block w-full px-3 py-2 text-left text-sm hover:bg-surface">English</button>
-                <button className="block w-full px-3 py-2 text-left text-sm hover:bg-surface">Español</button>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/contato"
-            className="rounded-md bg-brand px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-600"
-          >
-            Solicitar Orçamento
+          <Link href="/contato" className="ml-2 hidden rounded-md bg-brand px-3 py-2 text-sm font-semibold text-white md:block">
+            {t('cta')}
           </Link>
-        </nav>
-
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex items-center gap-2 rounded-md border border-black/10 px-3 py-2 text-sm md:hidden"
-          aria-label="Abrir menu"
-        >
-          ☰ Menu
-        </button>
-      </div>
-
-      {/* Mobile drawer */}
-      {open && (
-        <div className="border-t border-black/5 bg-white md:hidden">
-          <div className="container flex flex-col gap-2 py-3">
-            {nav.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
-                className={`rounded-md px-3 py-2 text-sm transition-colors ${
-                  isActive(pathname, href) ? 'bg-surface text-brand' : 'text-ink/80 hover:bg-surface'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
-
-            <div className="flex items-center gap-2 px-1 py-2">
-              <span className="text-sm text-ink/60">Idioma:</span>
-              <button className="rounded-md px-2 py-1 text-sm hover:bg-surface">PT</button>
-              <button className="rounded-md px-2 py-1 text-sm hover:bg-surface">EN</button>
-              <button className="rounded-md px-2 py-1 text-sm hover:bg-surface">ES</button>
-            </div>
-
-            <Link
-              href="/contato"
-              onClick={() => setOpen(false)}
-              className="rounded-md bg-brand px-3 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-brand-600"
-            >
-              Solicitar Orçamento
-            </Link>
-          </div>
         </div>
-      )}
+      </nav>
     </header>
   );
 }

@@ -2,22 +2,24 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { projetos, getProjetoBySlug } from "../_data"; // <— AQUI
 
-type Props = { params: { slug: string } };
+type Params = { slug: string };
 
 export function generateStaticParams() {
   return projetos.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const projeto = getProjetoBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params;
+  const projeto = getProjetoBySlug(slug);
   return {
     title: projeto ? `${projeto.titulo} · Portfólio | Portugal Engenharia` : "Projeto | Portfólio",
     description: projeto?.resumo ?? "Projeto do portfólio da Portugal Engenharia.",
   };
 }
 
-export default function ProjetoPage({ params }: Props) {
-  const projeto = getProjetoBySlug(params.slug);
+export default async function ProjetoPage({ params }: { params: Promise<Params> }) {
+  const { slug } = await params;
+  const projeto = getProjetoBySlug(slug);
   if (!projeto) return notFound();
 
   return (

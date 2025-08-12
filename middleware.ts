@@ -4,6 +4,5 @@ import routing from './next-intl.config';
 export default createMiddleware(routing);
 
 export const config = {
-  // Protege todas as rotas da app
-  matcher: ['/((?!_next|.*\\..*|api).*)']
+  matcher: ['/((?!_next|.*\\..*|api).*)'],
 };

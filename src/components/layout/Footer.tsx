@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
@@ -26,9 +27,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="/sobre" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Sobre Nós</a></li>
-              <li><a href="/portfolio" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Portfólio</a></li>
-              <li><a href="/contato" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Contato</a></li>
+              <li><Link href="/sobre" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Sobre Nós</Link></li>
+              <li><Link href="/portfolio" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Portfólio</Link></li>
+              <li><Link href="/contato" className="text-gray-200 hover:text-[color:var(--color-accent)] transition-colors">Contato</Link></li>
             </ul>
           </div>
 

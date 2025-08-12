@@ -1,10 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { Building2, Landmark, ClipboardList } from 'lucide-react';
 
-export default function HomePage() {
-  const t = useTranslations();
+export default async function HomePage() {
+  const t = await getTranslations();
 
   return (
     <>
