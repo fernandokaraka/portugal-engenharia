@@ -7,10 +7,43 @@
     "cta": "Solicitar Orçamento"
   },
   "hero": {
-    "titleA": "Construindo Seu Futuro com",
-    "titleB": "Inovação e Qualidade",
-    "lead": "Uma empresa renomada no setor de engenharia civil dedicada a oferecer soluções abrangentes para projetos de construção e infraestrutura.",
-    "contact": "Contato (34) 3231-1080",
-    "seeProjects": "Ver projetos"
+    "h1Start": "Construindo",
+    "titleFuture": "Seu Futuro",
+    "h1Connector": "com",
+    "titleExcellence": "Inovação e Qualidade",
+    "subtitle": "Uma empresa renomada no setor de engenharia civil dedicada a oferecer soluções abrangentes para projetos de construção e infraestrutura.",
+    "ctaQuote": "Contato (34) 3231-1080",
+    "ctaProjects": "Ver projetos"
+  },
+  "stats": {
+    "clients": "Clientes Satisfeitos",
+    "delivered": "Obras Entregues",
+    "approved": "Projetos Aprovados",
+    "certifications": "Certificações"
+  },
+  "services": {
+    "title": "Nossos Serviços em Destaque",
+    "subtitle": "Construindo Soluções, Superando Expectativas",
+    "text": "Oferecemos uma gama integral de serviços que abrange cada etapa do setor de engenharia.",
+    "construction": {
+      "title": "Construção Civil",
+      "description": "Projetos residenciais e comerciais com altos padrões de qualidade e segurança.",
+      "cta": "Ver projetos"
+    },
+    "infrastructure": {
+      "title": "Infraestrutura",
+      "description": "Obras de grande porte que conectam comunidades e impulsionam o desenvolvimento.",
+      "cta": "Ver projetos"
+    },
+    "consulting": {
+      "title": "Consultoria",
+      "description": "Planejamento, gestão e execução com suporte especializado.",
+      "cta": "Contato"
+    }
+  },
+  "cta": {
+    "ready": "Pronto para começar seu projeto?",
+    "readyDesc": "Fale conosco e receba uma proposta personalizada.",
+    "freeQuote": "Solicitar Orçamento"
   }
 }

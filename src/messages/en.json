@@ -1,16 +1,49 @@
 {
   "nav": {
-    "home": "Inicio",
-    "about": "Sobre nosotros",
-    "portfolio": "Portafolio",
-    "contact": "Contacto",
-    "cta": "Solicitar Presupuesto"
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cta": "Get a Quote"
   },
   "hero": {
-    "titleA": "Construyendo su Futuro con",
-    "titleB": "Innovación y Calidad",
-    "lead": "Empresa reconocida en ingeniería civil que ofrece soluciones integrales para proyectos de construcción e infraestructura.",
-    "contact": "Contacto +55 (34) 3231-1080",
-    "seeProjects": "Ver proyectos"
+    "h1Start": "Building",
+    "titleFuture": "Your Future",
+    "h1Connector": "with",
+    "titleExcellence": "Innovation and Excellence",
+    "subtitle": "A renowned civil engineering company dedicated to delivering comprehensive solutions for construction and infrastructure projects.",
+    "ctaQuote": "Contact +55 (34) 3231-1080",
+    "ctaProjects": "See projects"
+  },
+  "stats": {
+    "clients": "Happy Clients",
+    "delivered": "Delivered Works",
+    "approved": "Approved Projects",
+    "certifications": "Certifications"
+  },
+  "services": {
+    "title": "Our Featured Services",
+    "subtitle": "Building Solutions, Exceeding Expectations",
+    "text": "We offer a comprehensive range of services covering every step of engineering.",
+    "construction": {
+      "title": "Civil Construction",
+      "description": "Residential and commercial projects with the highest standards of quality and safety.",
+      "cta": "See projects"
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "description": "Large-scale works that connect communities and drive development.",
+      "cta": "See projects"
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Planning, management and execution with specialized support.",
+      "cta": "Contact"
+    }
+  },
+  "cta": {
+    "ready": "Ready to start your project?",
+    "readyDesc": "Contact us and receive a tailored proposal.",
+    "freeQuote": "Get a Quote"
   }
 }
