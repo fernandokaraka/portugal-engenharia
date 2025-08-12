@@ -1,45 +1,58 @@
-// src/app/sobre/page.tsx
 export default function SobrePage() {
   return (
     <>
-      <section className="bg-surface">
-        <div className="container py-12">
-          <h1 className="text-3xl font-bold text-brand">Sobre a Portugal Engenharia</h1>
-          <p className="mt-3 max-w-3xl text-ink/80">
-            A Portugal Engenharia é uma empresa do setor civil e mecânico-industrial focada em atender
-            segmentos industriais e civis, oferecendo soluções integradas aliadas à gestão de projetos e conhecimento técnico.
+      {/* HERO */}
+      <section
+        className="relative"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1920&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="hero-overlay" />
+        <div className="container relative section-lg text-white">
+          <h1>Sobre a Portugal Engenharia</h1>
+          <p className="mt-4 max-w-3xl text-white/90">
+            Empresa do setor civil e mecânico-industrial focada em atender segmentos
+            industriais e civis, oferecendo soluções integradas aliadas à gestão de projetos
+            e conhecimento técnico.
           </p>
         </div>
       </section>
 
+      {/* MISSÃO / VISÃO */}
       <section>
-        <div className="container grid gap-8 py-12 md:grid-cols-2">
-          <div className="rounded-xl bg-white p-6 shadow-soft">
-            <h2 className="text-xl font-semibold text-ink">Missão</h2>
-            <p className="mt-2 text-ink/80">
-              Fornecer soluções para obras alicerçadas nos pilares de Gestão de Projetos, Engenharia e SSMA
-              (Saúde, Segurança e Meio Ambiente), com eficiência, qualidade e foco no cliente.
+        <div className="container section grid gap-8 md:grid-cols-2">
+          <div className="card">
+            <h2 className="text-brand">Missão</h2>
+            <p className="mt-3">
+              Fornecer soluções para obras alicerçadas em Gestão de Projetos, Engenharia e
+              SSMA (Saúde, Segurança e Meio Ambiente), com eficiência, qualidade e foco no cliente.
             </p>
           </div>
-          <div className="rounded-xl bg-white p-6 shadow-soft">
-            <h2 className="text-xl font-semibold text-ink">Visão</h2>
-            <p className="mt-2 text-ink/80">
-              Ser referência no setor civil e industrial, trabalhando por um ambiente mais sustentável e por resultados duradouros.
+          <div className="card">
+            <h2 className="text-brand">Visão</h2>
+            <p className="mt-3">
+              Ser referência no setor civil e industrial, trabalhando por um ambiente mais
+              sustentável e por resultados duradouros.
             </p>
           </div>
         </div>
       </section>
 
+      {/* PILARES */}
       <section className="bg-surface">
-        <div className="container py-12">
-          <h2 className="text-2xl font-bold text-brand">Nossos Pilares</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className="container section">
+          <h2 className="text-brand">Nossos Pilares</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             {[
-              ['Tecnologia', 'Aplicação de técnicas e ferramentas modernas para produtividade e qualidade.'],
-              ['Insumos', 'Seleção criteriosa de materiais e fornecedores, garantindo performance e prazo.'],
-              ['Planejamento', 'Gestão de escopo, prazo, custo e risco para entregar no nível esperado.']
+              ["Tecnologia", "Técnicas e ferramentas modernas para produtividade e qualidade."],
+              ["Insumos", "Seleção criteriosa de materiais e fornecedores para performance e prazo."],
+              ["Planejamento", "Gestão de escopo, prazo, custo e risco para entregar no nível esperado."],
             ].map(([title, desc]) => (
-              <div key={title} className="rounded-xl bg-white p-6 shadow-soft">
+              <div key={title} className="card">
                 <div className="text-lg font-semibold">{title}</div>
                 <p className="mt-2 text-ink/70">{desc}</p>
               </div>
@@ -48,26 +61,51 @@ export default function SobrePage() {
         </div>
       </section>
 
+      {/* SPLIT */}
       <section>
-        <div className="container py-12">
-          <h2 className="text-2xl font-bold text-brand">Áreas de Atuação</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="container section grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 className="text-brand">Como trabalhamos</h2>
+            <p className="mt-4">
+              Abordagem colaborativa e personalizada: diagnóstico, planejamento, gestão de
+              risco/SSMA, execução com controle de qualidade e comissionamento.
+            </p>
+            <ul className="mt-5 grid gap-2">
+              {[
+                "Diagnóstico e planejamento",
+                "Gestão de risco e SSMA",
+                "Execução com controle de qualidade",
+                "Comissionamento e entrega",
+              ].map((i) => (
+                <li key={i} className="rounded-md bg-surface px-3 py-2">{i}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="img-tile h-[400px]">
+            <div
+              className="img"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop')",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* MÉTRICAS */}
+      <section className="border-y border-black/5">
+        <div className="container section">
+          <div className="grid grid-cols-2 gap-12 text-center sm:grid-cols-4">
             {[
-              'Montagem e Manutenção Industrial',
-              'Caldeiraria',
-              'Tubulações',
-              'Manutenção Mecânica',
-              'Soldas Especiais',
-              'Isolamento Térmico',
-              'Gerenciamento de Obra',
-              'Refrigeração (amônia, água gelada, sala de máquinas, redes)',
-              'Sistemas de Prevenção e Combate a Incêndio (hidrantes, sprinklers)',
-              'Pavimentação e Galerias',
-              'Adequações de Segurança (NR-35, NR-13, NR-12, NR-36)',
-              'Locação de Máquinas e Equipamentos'
-            ].map((item) => (
-              <div key={item} className="rounded-xl bg-white p-5 shadow-soft">
-                {item}
+              ["1200+", "Clientes Satisfeitos"],
+              ["35+", "Obras Entregues"],
+              ["2500+", "Projetos Aprovados"],
+              ["45+", "Certificações"],
+            ].map(([n, t]) => (
+              <div key={t}>
+                <div className="text-5xl font-extrabold">{n}</div>
+                <div className="mt-2 text-ink/70">{t}</div>
               </div>
             ))}
           </div>

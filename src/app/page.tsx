@@ -1,23 +1,24 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function HomePage() {
   return (
     <>
-      {/* HERO com imagem + overlay + py-16 */}
+      {/* HERO */}
       <section
         className="relative"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1920&auto=format&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container relative py-16 sm:py-20 lg:py-24 min-h-[520px] flex items-center">
+        <div className="hero-overlay" />
+        <div className="container relative section-lg min-h-[680px] flex items-center">
           <div className="mx-auto max-w-4xl text-center text-white">
             <h1>
-              Construindo Seu Futuro com <span className="text-support">Inovação</span> e{' '}
+              Construindo Seu Futuro com{" "}
+              <span className="text-support">Inovação</span> e{" "}
               <span className="text-support">Qualidade</span>
             </h1>
             <p className="mx-auto mt-4 max-w-3xl text-white/90">
@@ -25,9 +26,13 @@ export default function HomePage() {
               soluções abrangentes para projetos de construção e infraestrutura.
             </p>
 
-            <div className="mt-8 flex items-center justify-center gap-3">
-              <Link href="/contato" className="btn btn-primary">Contato (34) 3231-1080</Link>
-              <Link href="/portfolio" className="btn bg-white text-ink hover:bg-surface">Ver projetos</Link>
+            <div className="mt-9 flex items-center justify-center gap-4">
+              <Link href="/contato" className="btn btn-primary">
+                Contato (34) 3231-1080
+              </Link>
+              <Link href="/portfolio" className="btn btn-ghost">
+                Ver projetos
+              </Link>
             </div>
           </div>
         </div>
@@ -35,130 +40,162 @@ export default function HomePage() {
 
       {/* NÚMEROS */}
       <section className="border-y border-black/5 bg-white">
-        <div className="container py-14">
-          <div className="grid grid-cols-2 gap-10 text-center sm:grid-cols-4">
+        <div className="container section">
+          <div className="grid grid-cols-2 gap-12 text-center sm:grid-cols-4">
             {[
-              ['1200+', 'Clientes Satisfeitos'],
-              ['35+', 'Obras Entregues'],
-              ['2500+', 'Projetos Aprovados'],
-              ['45+', 'Certificações']
+              ["1200+", "Clientes Satisfeitos"],
+              ["35+", "Obras Entregues"],
+              ["2500+", "Projetos Aprovados"],
+              ["45+", "Certificações"],
             ].map(([n, t]) => (
               <div key={t}>
-                <div className="text-4xl font-extrabold text-ink">{n}</div>
-                <div className="mt-1 text-ink/70">{t}</div>
+                <div className="text-5xl font-extrabold text-ink">{n}</div>
+                <div className="mt-2 text-ink/70">{t}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SERVIÇOS INTRO */}
+      {/* SERVIÇOS */}
       <section className="bg-surface">
-        <div className="container py-16">
+        <div className="container section">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-brand">Nossos Serviços em Destaque</h2>
-            <p className="mt-3 text-ink/80">
+            <p className="mt-4">
               Da infraestrutura urbana à montagem industrial, unimos planejamento,
               tecnologia e execução para entregar obras com segurança e performance.
             </p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ['Residenciais', 'Execução e gerenciamento de obras residenciais.'],
-              ['Comerciais & Industriais', 'Projetos e obras para negócios e indústrias.'],
-              ['Infraestrutura', 'Pavimentação, drenagem, loteamentos e urbanismo.']
+              ["Residenciais", "Execução e gerenciamento de obras residenciais."],
+              ["Comerciais & Industriais", "Projetos e obras para negócios e indústrias."],
+              ["Infraestrutura", "Pavimentação, drenagem, loteamentos e urbanismo."],
             ].map(([title, desc]) => (
-              <div key={title} className="rounded-2xl bg-white p-6 shadow-soft">
+              <article key={title} className="card group">
                 <div className="text-lg font-semibold text-ink">{title}</div>
                 <p className="mt-2 text-ink/70">{desc}</p>
-                <Link href="/portfolio" className="mt-4 inline-block font-medium text-brand hover:underline">
+                <Link
+                  href="/portfolio"
+                  className="mt-4 inline-block link-underline text-brand"
+                >
                   Ver projetos →
                 </Link>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SPLIT SECTIONS */}
+      {/* SPLIT 1 */}
       <section>
-        <div className="container py-16 grid gap-10 md:grid-cols-2 items-center">
+        <div className="container section grid items-center gap-12 md:grid-cols-2">
           <div>
             <h2 className="text-brand">Soluções Industriais</h2>
-            <p className="mt-3 text-ink/80">
+            <p className="mt-4">
               Montagem e manutenção industrial com foco em caldeiraria, tubulações,
               soldas especiais e gerenciamento de obra. Aplicamos SSMA e controle de
               qualidade em todo o processo.
             </p>
-            <ul className="mt-4 grid gap-2">
-              {['Caldeiraria', 'Tubulações', 'Soldas especiais', 'Gerenciamento de obra'].map(i => (
-                <li key={i} className="rounded-md bg-surface px-3 py-2">{i}</li>
-              ))}
+            <ul className="mt-5 grid gap-2">
+              {["Caldeiraria", "Tubulações", "Soldas especiais", "Gerenciamento de obra"].map(
+                (i) => (
+                  <li key={i} className="rounded-md bg-surface px-3 py-2">
+                    {i}
+                  </li>
+                )
+              )}
             </ul>
           </div>
-          <div
-            className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1581093458791-9d130e7f2a87?q=80&w=1600&auto=format&fit=crop')"
-            }}
-          />
-        </div>
 
-        <div className="container py-16 grid gap-10 md:grid-cols-2 items-center">
-          <div
-            className="order-2 md:order-1 h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop')"
-            }}
-          />
-          <div className="order-1 md:order-2">
-            <h2 className="text-brand">Infraestrutura Urbana</h2>
-            <p className="mt-3 text-ink/80">
-              Pavimentação asfáltica, drenagem e galerias. Planejamento para reduzir
-              impacto no trânsito e entregas dentro do prazo.
-            </p>
-            <ul className="mt-4 grid gap-2">
-              {['Pavimentação e drenagem', 'Galerias', 'Sinalização', 'Controle tecnológico'].map(i => (
-                <li key={i} className="rounded-md bg-surface px-3 py-2">{i}</li>
-              ))}
-            </ul>
+          <div className="img-tile h-[380px]">
+            <div
+              className="img"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1581093458791-9d130e7f2a87?q=80&w=1600&auto=format&fit=crop')",
+              }}
+            />
           </div>
-        </div>
-
-        <div className="container py-16 grid gap-10 md:grid-cols-2 items-center">
-          <div>
-            <h2 className="text-brand">Projetos Sob Medida</h2>
-            <p className="mt-3 text-ink/80">
-              Refrigeração (amônia/água gelada), salas de máquinas, redes e isolamento térmico.
-              Engineering-to-order para necessidades específicas.
-            </p>
-            <ul className="mt-4 grid gap-2">
-              {['Amônia', 'Água gelada', 'Sala de máquinas', 'Isolamento térmico'].map(i => (
-                <li key={i} className="rounded-md bg-surface px-3 py-2">{i}</li>
-              ))}
-            </ul>
-          </div>
-          <div
-            className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1581093588401-16a9cfd9b8f0?q=80&w=1600&auto=format&fit=crop')"
-            }}
-          />
         </div>
       </section>
 
-      {/* CTA FINAL */}
+      {/* SPLIT 2 */}
+      <section className="bg-surface">
+        <div className="container section grid items-center gap-12 md:grid-cols-2">
+          <div className="order-2 md:order-1 img-tile h-[380px]">
+            <div
+              className="img"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop')",
+              }}
+            />
+          </div>
+
+          <div className="order-1 md:order-2">
+            <h2 className="text-brand">Infraestrutura Urbana</h2>
+            <p className="mt-4">
+              Pavimentação asfáltica, drenagem e galerias. Planejamento para reduzir
+              impacto no trânsito e entregas dentro do prazo.
+            </p>
+            <ul className="mt-5 grid gap-2">
+              {[
+                "Pavimentação e drenagem",
+                "Galerias",
+                "Sinalização",
+                "Controle tecnológico",
+              ].map((i) => (
+                <li key={i} className="rounded-md bg-white px-3 py-2 shadow-soft">
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* SPLIT 3 */}
       <section>
-        <div className="container py-16">
-          <div className="rounded-2xl bg-brand px-6 py-12 text-center text-white shadow-soft">
-            <h3 className="text-3xl font-bold">Pronto para começar seu projeto?</h3>
-            <p className="mx-auto mt-2 max-w-2xl text-white/90">
+        <div className="container section grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 className="text-brand">Projetos Sob Medida</h2>
+            <p className="mt-4">
+              Refrigeração (amônia/água gelada), salas de máquinas, redes e isolamento térmico.
+              Engineering-to-order para necessidades específicas.
+            </p>
+            <ul className="mt-5 grid gap-2">
+              {["Amônia", "Água gelada", "Sala de máquinas", "Isolamento térmico"].map((i) => (
+                <li key={i} className="rounded-md bg-surface px-3 py-2">
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="img-tile h-[380px]">
+            <div
+              className="img"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1581093588401-16a9cfd9b8f0?q=80&w=1600&auto=format&fit=crop')",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section>
+        <div className="container section">
+          <div className="rounded-2xl bg-brand px-6 py-14 text-center text-white shadow-soft">
+            <h3 className="text-4xl font-extrabold">Pronto para começar seu projeto?</h3>
+            <p className="mx-auto mt-4 max-w-2xl text-white/90">
               Fale conosco e receba uma proposta personalizada.
             </p>
-            <div className="mt-6">
+            <div className="mt-7">
               <Link href="/contato" className="btn bg-white text-brand hover:bg-surface">
                 Solicitar Orçamento
               </Link>
