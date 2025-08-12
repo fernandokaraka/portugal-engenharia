@@ -1,38 +1,40 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import type {Metadata} from 'next';
+import {NextIntlClientProvider, getMessages} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+import {MontSerrat} from './mont'; // ver util abaixo ou carregue aqui
+import '../globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Portugal Engenharia',
+  description: 'Soluções em engenharia civil e mecânico-industrial.'
+};
+
+// (opcional) validação do locale
+const LOCALES = ['pt','en','es'] as const;
 
 export default async function LocaleLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: {locale: string};
 }) {
-  const { locale } = params;
+  const {locale} = params;
+  if (!LOCALES.includes(locale as any)) notFound();
 
-  // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
-
-  // Load messages explicitly based on the URL locale
-  let messages: Record<string, any>;
-  try {
-    messages = (await import(`@/messages/${locale}.json`)).default;
-  } catch {
-    messages = (await import('@/messages/pt.json')).default;
-  }
+  const messages = await getMessages(); // carrega src/messages/<locale>.json
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <body className={`${MontSerrat} min-h-screen bg-white text-ink`}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

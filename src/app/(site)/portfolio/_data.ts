@@ -1,4 +1,3 @@
-// src/app/portfolio/_data.ts
 export type Projeto = {
   slug: string;
   titulo: string;
@@ -44,8 +43,7 @@ export const projetos: Projeto[] = [
   {
     slug: "refrigeracao-planta-z",
     titulo: "Sistema de Refrigeração",
-    resumo:
-      "Projeto e montagem de sala de máquinas, redes e isolamento térmico.",
+    resumo: "Projeto e montagem de sala de máquinas, redes e isolamento térmico.",
     descricao:
       "Projeto e montagem de sala de máquinas, redes e isolamento térmico. Comissionamento e startup com segurança e performance.",
     capa:
@@ -60,5 +58,6 @@ export const projetos: Projeto[] = [
 ];
 
 export function getProjetoBySlug(slug: string) {
-  return projetos.find((p) => p.slug === slug);
+  const s = decodeURIComponent(slug).toLowerCase();
+  return projetos.find((p) => p.slug.toLowerCase() === s);
 }

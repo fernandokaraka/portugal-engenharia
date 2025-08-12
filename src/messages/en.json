@@ -1,159 +1,16 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "portfolio": "Portfolio",
-    "contact": "Contact",
-    "language": "Language",
-    "quote": "Request Quote"
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "cta": "Solicitar Presupuesto"
   },
   "hero": {
-    "titleFuture": "Your Future",
-    "titleExcellence": "Innovation and Quality",
-    "h1Start": "Building",
-    "h1Connector": "with",
-    "subtitle": "A renowned company in the civil engineering sector dedicated to providing comprehensive solutions for construction and infrastructure projects.",
-    "ctaProjects": "View Projects",
-    "ctaQuote": "Contact (34) 3231-1080"
-  },
-  "stats": {
-    "experience": "Years of Experience",
-    "projects": "Completed Projects",
-    "professionals": "Professionals",
-    "quality": "Quality Guaranteed",
-    "clients": "Satisfied Clients",
-    "delivered": "Delivered Works",
-    "approved": "Approved Projects",
-    "certifications": "Certifications"
-  },
-  "services": {
-    "title": "Our Featured Services",
-    "subtitle": "Building Solutions, Exceeding Expectations",
-    "text": "At Portugal Engenharia, we offer a comprehensive range of services that embrace every aspect of the engineering sector. From subdivision infrastructure to the execution of large-scale works, our expertise is the guarantee of successful projects.",
-    "construction": {
-      "title": "Civil Construction",
-      "description": "Residential and commercial projects executed with the highest standards of quality and safety.",
-      "cta": "View projects"
-    },
-    "infrastructure": {
-      "title": "Infrastructure",
-      "description": "Bridges, viaducts and large-scale projects that connect communities and drive development.",
-      "cta": "View projects"
-    },
-    "consulting": {
-      "title": "Consulting",
-      "description": "Specialized advisory in planning, management and execution of engineering projects.",
-      "cta": "Contact us"
-    }
-  },
-  "cta": {
-    "ready": "Ready to start your project?",
-    "readyDesc": "Contact us and discover how we can transform your ideas into reality.",
-    "freeQuote": "Request Free Quote"
-  },
-  "about": {
-    "title": "Portugal Engenharia in Detail",
-    "subtitle": "A family company that became a reference in civil engineering and infrastructure in Portugal",
-    "history": {
-      "title": "Our History",
-      "p1": "Welcome to the heart of Portugal Engenharia, where every project is a narrative of innovation and excellence. Since our foundation, our experienced team of engineers, architects and industry professionals embraces each challenge with the determination to transform concepts into tangible achievements.",
-      "p2": "We stand out for a collaborative and personalized approach, understanding that construction goes beyond the physical. It's about understanding the unique visions and challenges of each client. At Portugal Engenharia, we are committed not only to meeting expectations, but to exceeding them, forging lasting partnerships and delivering projects that transcend physical structures, incorporating dreams and innovation.",
-      "p3": "Join us as we continue to build, transform and leave a lasting mark on the engineering and construction landscape."
-    },
-    "values": {
-      "title": "Our Values",
-      "subtitle": "Principles that guide every project and decision in our company",
-      "quality": {
-        "title": "Quality",
-        "description": "Commitment to the highest quality standards in every detail of our projects."
-      },
-      "trust": {
-        "title": "Trust",
-        "description": "Lasting relationships based on transparency, honesty and meeting deadlines."
-      },
-      "innovation": {
-        "title": "Innovation",
-        "description": "Adoption of modern technologies and innovative methodologies for exceptional results."
-      }
-    },
-    "team": {
-      "title": "Our Team",
-      "subtitle": "Experienced and qualified professionals, united by the passion to build the future"
-    },
-    "ctaTitle": "Shall we work together?",
-    "ctaDesc": "We are ready to transform your vision into reality. Contact us and discover how we can help.",
-    "ctaButton": "Get in Touch"
-  },
-  "portfolio": {
-    "title": "Our Successful Portfolio",
-    "subtitle": "Transforming Ideas into Lasting Structures",
-    "text": "Explore our diversified portfolio, where each project tells a story of success. At Portugal Engenharia, each structure is more than a building; it is a testament to our dedication to excellence, innovation and commitment to transforming ideas into reality. Browse the images and discover how we are building the future, one project at a time.",
-    "featured": "Featured",
-    "viewDetails": "View Details",
-    "ctaTitle": "Have a project in mind?",
-    "ctaDesc": "We are ready to transform your ideas into reality. Contact us and let's talk about your next project.",
-    "ctaButton": "Request Quote"
-  },
-  "projectDetail": {
-    "backToPortfolio": "Back to Portfolio",
-    "notFound": "Project not found",
-    "aboutProject": "About the Project",
-    "gallery": "Image Gallery",
-    "otherProjects": "Other Projects",
-    "viewProject": "View Project",
-    "liked": "Did you like this project?",
-    "likedDesc": "Contact us and let's talk about how we can help with your next project.",
-    "talkToUs": "Talk to Us",
-    "clickToEnlarge": "Click to enlarge"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "We are ready to transform your ideas into reality. Talk to us!",
-    "info": {
-      "title": "Contact Information",
-      "description": "Our team is available to clarify doubts, provide quotes and discuss your next engineering project.",
-      "phone": "Phone",
-      "email": "Email",
-      "address": "Address",
-      "hours": "Business Hours",
-      "schedule": "Monday to Friday: 8am to 6pm\\nSaturday: 9am to 1pm"
-    },
-    "form": {
-      "title": "Send us a Message",
-      "name": "Name",
-      "phone": "Phone",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "selectSubject": "Select a subject",
-      "subjects": {
-        "quote": "Quote Request",
-        "project": "New Project",
-        "consulting": "Consulting",
-        "partnership": "Partnership",
-        "other": "Other"
-      },
-      "placeholders": {
-        "name": "Your full name",
-        "phone": "+351 XXX XXX XXX",
-        "email": "your@email.com",
-        "message": "Describe your project or question..."
-      },
-      "submit": "Send Message",
-      "required": "*",
-      "success": "Message sent successfully! We will contact you soon."
-    },
-    "location": {
-      "title": "Our Location",
-      "subtitle": "Visit our office in Lisbon",
-      "mapPlaceholder": "Map will be integrated here"
-    }
-  },
-  "footer": {
-    "description": "For over 25 years building the future with quality, innovation and commitment to excellence in every project.",
-    "quickLinks": "Quick Links",
-    "contact": "Contact",
-    "rights": "© {year} Portugal Engenharia. All rights reserved.",
-    "address": "Lisbon, Portugal\\nRua das Engenharias, 123"
+    "titleA": "Construyendo su Futuro con",
+    "titleB": "Innovación y Calidad",
+    "lead": "Empresa reconocida en ingeniería civil que ofrece soluciones integrales para proyectos de construcción e infraestructura.",
+    "contact": "Contacto +55 (34) 3231-1080",
+    "seeProjects": "Ver proyectos"
   }
 }
