@@ -3,11 +3,12 @@ import Link from 'next/link';
 export default function HomePage() {
   return (
     <>
-      {/* HERO com imagem + overlay + padding 64px */}
+      {/* HERO com imagem + overlay + py-16 */}
       <section
         className="relative"
         style={{
-          backgroundImage: "url('/images/hero_construction.jpg')",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1920&auto=format&fit=crop')",
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -25,15 +26,8 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex items-center justify-center gap-3">
-              <Link href="/contato" className="btn btn-primary">
-                Contato (34) 3231-1080
-              </Link>
-              <Link
-                href="/portfolio"
-                className="btn bg-white text-ink hover:bg-surface"
-              >
-                Ver projetos
-              </Link>
+              <Link href="/contato" className="btn btn-primary">Contato (34) 3231-1080</Link>
+              <Link href="/portfolio" className="btn bg-white text-ink hover:bg-surface">Ver projetos</Link>
             </div>
           </div>
         </div>
@@ -86,7 +80,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SPLIT SECTIONS (texto + imagem) */}
+      {/* SPLIT SECTIONS */}
       <section>
         <div className="container py-16 grid gap-10 md:grid-cols-2 items-center">
           <div>
@@ -102,13 +96,23 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <div className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-               style={{ backgroundImage: "url('/images/industrial_split.jpg')" }} />
+          <div
+            className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1581093458791-9d130e7f2a87?q=80&w=1600&auto=format&fit=crop')"
+            }}
+          />
         </div>
 
         <div className="container py-16 grid gap-10 md:grid-cols-2 items-center">
-          <div className="order-2 md:order-1 h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-               style={{ backgroundImage: "url('/images/infra_split.jpg')" }} />
+          <div
+            className="order-2 md:order-1 h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop')"
+            }}
+          />
           <div className="order-1 md:order-2">
             <h2 className="text-brand">Infraestrutura Urbana</h2>
             <p className="mt-3 text-ink/80">
@@ -136,8 +140,13 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <div className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
-               style={{ backgroundImage: "url('/images/refrig_split.jpg')" }} />
+          <div
+            className="h-[360px] rounded-2xl bg-cover bg-center shadow-soft"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1581093588401-16a9cfd9b8f0?q=80&w=1600&auto=format&fit=crop')"
+            }}
+          />
         </div>
       </section>
 
