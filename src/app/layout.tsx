@@ -1,8 +1,7 @@
+// src/app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { cookies } from 'next/headers';
-import Navbar from '@/components/Navbar'; // se estiver usando a opção A
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -10,25 +9,13 @@ export const metadata: Metadata = {
   description: 'Engenharia civil com qualidade, inovação e compromisso.'
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get('NEXT_LOCALE')?.value || 'pt';
-
-  let messages: any;
-  try {
-    messages = (await import(`../messages/${locale}.json`)).default;
-  } catch {
-    messages = (await import('../messages/pt.json')).default;
-  }
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={locale}>
+    <html lang="pt">
       <body className="min-h-screen bg-white text-ink">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
