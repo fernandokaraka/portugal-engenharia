@@ -1,33 +1,32 @@
 // src/app/layout.tsx
-import "@/app/globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import type { Metadata } from "next";
+import "./globals.css";
+import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Portugal Engenharia",
-  description: "Soluções em engenharia civil e mecânico-industrial."
+  description: "Soluções em engenharia civil e mecânico-industrial.",
 };
 
-export default async function RootLayout({
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
-  const messages = await getMessages();
-
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
+    <html lang="pt-BR">
+      <body className={`${montserrat.className} min-h-screen bg-white text-ink`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

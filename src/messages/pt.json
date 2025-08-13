@@ -4,18 +4,23 @@
     "about": "Sobre",
     "portfolio": "Portfólio",
     "contact": "Contato",
-    "cta": "Solicitar Orçamento"
+    "language": "Idioma",
+    "quote": "Solicitar Orçamento"
   },
   "hero": {
-    "h1Start": "Construindo",
     "titleFuture": "Seu Futuro",
-    "h1Connector": "com",
     "titleExcellence": "Inovação e Qualidade",
+    "h1Start": "Construindo",
+    "h1Connector": "com",
     "subtitle": "Uma empresa renomada no setor de engenharia civil dedicada a oferecer soluções abrangentes para projetos de construção e infraestrutura.",
-    "ctaQuote": "Contato (34) 3231-1080",
-    "ctaProjects": "Ver projetos"
+    "ctaProjects": "Ver Projetos",
+    "ctaQuote": "Contato (34) 3231-1080"
   },
   "stats": {
+    "experience": "Anos de Experiência",
+    "projects": "Projetos Concluídos",
+    "professionals": "Profissionais",
+    "quality": "Qualidade Garantida",
     "clients": "Clientes Satisfeitos",
     "delivered": "Obras Entregues",
     "approved": "Projetos Aprovados",
@@ -24,26 +29,131 @@
   "services": {
     "title": "Nossos Serviços em Destaque",
     "subtitle": "Construindo Soluções, Superando Expectativas",
-    "text": "Oferecemos uma gama integral de serviços que abrange cada etapa do setor de engenharia.",
+    "text": "Na Portugal Engenharia, oferecemos uma gama abrangente de serviços que abraçam cada aspecto do setor de engenharia. Desde a infraestrutura de loteamentos até a execução de obras de grande porte, nossa expertise é a garantia de projetos bem-sucedidos.",
     "construction": {
       "title": "Construção Civil",
-      "description": "Projetos residenciais e comerciais com altos padrões de qualidade e segurança.",
+      "description": "Projetos residenciais e comerciais executados com os mais altos padrões de qualidade e segurança.",
       "cta": "Ver projetos"
     },
     "infrastructure": {
       "title": "Infraestrutura",
-      "description": "Obras de grande porte que conectam comunidades e impulsionam o desenvolvimento.",
+      "description": "Pontes, viadutos e obras de grande porte que conectam comunidades e impulsionam o desenvolvimento.",
       "cta": "Ver projetos"
     },
     "consulting": {
       "title": "Consultoria",
-      "description": "Planejamento, gestão e execução com suporte especializado.",
-      "cta": "Contato"
+      "description": "Assessoria especializada em planejamento, gestão e execução de projetos de engenharia.",
+      "cta": "Falar conosco"
     }
   },
   "cta": {
     "ready": "Pronto para começar seu projeto?",
-    "readyDesc": "Fale conosco e receba uma proposta personalizada.",
-    "freeQuote": "Solicitar Orçamento"
+    "readyDesc": "Entre em contato conosco e descubra como podemos transformar suas ideias em realidade.",
+    "freeQuote": "Solicitar Orçamento Gratuito"
+  },
+  "about": {
+    "title": "A Portugal Engenharia em Detalhes",
+    "subtitle": "Uma empresa familiar que se tornou referência em engenharia civil e infraestrutura em Portugal",
+    "history": {
+      "title": "Nossa História",
+      "p1": "Bem-vindo ao coração da Portugal Engenharia, onde cada projeto é uma narrativa de inovação e excelência. Desde nossa fundação, nossa equipe experiente de engenheiros, arquitetos e profissionais do setor abraça cada desafio com a determinação de transformar conceitos em realizações tangíveis.",
+      "p2": "Nos destacamos por uma abordagem colaborativa e personalizada, entendendo que a construção vai além do físico. É sobre compreender as visões e desafios únicos de cada cliente. Na Portugal Engenharia, comprometemo-nos não apenas a atender, mas a superar expectativas, forjando parcerias duradouras e entregando projetos que transcendem estruturas físicas, incorporando sonhos e inovação.",
+      "p3": "Junte-se a nós enquanto continuamos a construir, transformar e deixar uma marca duradoura no cenário da engenharia e construção."
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "subtitle": "Princípios que norteiam cada projeto e decisão em nossa empresa",
+      "quality": {
+        "title": "Qualidade",
+        "description": "Comprometimento com os mais altos padrões de qualidade em cada detalhe dos nossos projetos."
+      },
+      "trust": {
+        "title": "Confiança",
+        "description": "Relacionamentos duradouros baseados na transparência, honestidade e cumprimento de prazos."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "Adoção de tecnologias modernas e metodologias inovadoras para resultados excepcionais."
+      }
+    },
+    "team": {
+      "title": "Nossa Equipe",
+      "subtitle": "Profissionais experientes e qualificados, unidos pela paixão em construir o futuro"
+    },
+    "ctaTitle": "Vamos trabalhar juntos?",
+    "ctaDesc": "Estamos prontos para transformar sua visão em realidade. Entre em contato e descubra como podemos ajudar.",
+    "ctaButton": "Entrar em Contato"
+  },
+  "portfolio": {
+    "title": "Nosso Portfólio de Sucesso",
+    "subtitle": "Transformando Ideias em Estruturas Duradouras",
+    "text": "Explore nosso portfólio diversificado, onde cada projeto conta uma história de sucesso. Na Portugal Engenharia, cada estrutura é mais do que uma construção; é um testemunho de nossa dedicação à excelência, inovação e compromisso em transformar ideias em realidade. Navegue pelas imagens e descubra como estamos construindo o futuro, um projeto de cada vez.",
+    "featured": "Destaque",
+    "viewDetails": "Ver Detalhes",
+    "ctaTitle": "Tem um projeto em mente?",
+    "ctaDesc": "Estamos prontos para transformar suas ideias em realidade. Entre em contato e vamos conversar sobre seu próximo projeto.",
+    "ctaButton": "Solicitar Orçamento"
+  },
+  "projectDetail": {
+    "backToPortfolio": "Voltar ao Portfólio",
+    "notFound": "Projeto não encontrado",
+    "aboutProject": "Sobre o Projeto",
+    "gallery": "Galeria de Imagens",
+    "otherProjects": "Outros Projetos",
+    "viewProject": "Ver Projeto",
+    "liked": "Gostou deste projeto?",
+    "likedDesc": "Entre em contato conosco e vamos conversar sobre como podemos ajudar no seu próximo projeto.",
+    "talkToUs": "Falar Conosco",
+    "clickToEnlarge": "Clique para ampliar"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos prontos para transformar suas ideias em realidade. Fale conosco!",
+    "info": {
+      "title": "Informações de Contato",
+      "description": "Nossa equipe está disponível para esclarecer dúvidas, fornecer orçamentos e discutir seu próximo projeto de engenharia.",
+      "phone": "Telefone",
+      "email": "Email",
+      "address": "Endereço",
+      "hours": "Horário de Funcionamento",
+      "schedule": "Segunda a Sexta: 8h às 18h\\nSábado: 9h às 13h"
+    },
+    "form": {
+      "title": "Envie-nos uma Mensagem",
+      "name": "Nome",
+      "phone": "Telefone",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "selectSubject": "Selecione um assunto",
+      "subjects": {
+        "quote": "Solicitação de Orçamento",
+        "project": "Novo Projeto",
+        "consulting": "Consultoria",
+        "partnership": "Parceria",
+        "other": "Outro"
+      },
+      "placeholders": {
+        "name": "Seu nome completo",
+        "phone": "+351 XXX XXX XXX",
+        "email": "seu@email.com",
+        "message": "Descreva seu projeto ou dúvida..."
+      },
+      "submit": "Enviar Mensagem",
+      "required": "*",
+      "success": "Mensagem enviada com sucesso! Entraremos em contato em breve."
+    },
+    "location": {
+      "title": "Nossa Localização",
+      "subtitle": "Visite nosso escritório em Lisboa",
+      "mapPlaceholder": "Mapa será integrado aqui"
+    }
+  },
+  "footer": {
+    "description": "Há mais de 25 anos construindo o futuro com qualidade, inovação e compromisso com a excelência em cada projeto.",
+    "quickLinks": "Links Rápidos",
+    "contact": "Contato",
+    "rights": "© {year} Portugal Engenharia. Todos os direitos reservados.",
+    "address": "Lisboa, Portugal\\nRua das Engenharias, 123"
   }
 }

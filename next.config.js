@@ -1,9 +1,11 @@
-// next.config.js
-const createNextIntlPlugin = require('next-intl/plugin');
-
-const withNextIntl = createNextIntlPlugin();
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/:lang(en|es)', destination: '/', permanent: false },
+      { source: '/:lang(en|es)/:path*', destination: '/:path*', permanent: false }
+    ];
+  }
+};
 
-module.exports = withNextIntl(nextConfig);
+module.exports = nextConfig;
